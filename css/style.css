@@ -1,0 +1,73 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* Initialize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Frontend Style */
+:root {
+  /* Primary Colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* Neutral Colors */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  /* Typography */
+  --font-f:"League Spartan", sans-serif;
+}
+
+/* Mobile Version */
+
+body{
+    font-family: var(--font-f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+.container{
+    width: 350px;
+}
+
+.title{
+    color: var(--very-dark-magenta);
+}
+.description{
+    color: var(--dark-grayish-magenta);
+}
+
+.stars-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.stars-review{
+    
+}
+
+.review-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
