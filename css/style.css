@@ -18,53 +18,175 @@
   --light-grayish-magenta: hsl(300, 24%, 96%);
   --white: hsl(0, 0%, 100%);
   /* Typography */
-  --font-f:"League Spartan", sans-serif;
+  --font-f: "League Spartan", sans-serif;
 }
 
 /* Mobile Version */
 
-body{
-    font-family: var(--font-f);
+body {
+  font-family: var(--font-f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: 0% 0%, 0% 100%;
+  background-repeat: no-repeat;
+}
+/* CSS Container */
+.container {
+  width: 350px;
+  text-align: center;
+}
+/* Content CSS Intro and Ratings */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Intro CSS */
+.intro-content {
+  margin-top: 50px;
+}
+.content-title {
+  color: var(--very-dark-magenta);
+  font-size: 35px;
+  font-weight: 700;
+  padding: 20px;
+}
+.content-description {
+  color: var(--dark-grayish-magenta);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 25px;
+}
+/* Ratings CSS */
+
+.ratings-container {
+  width: 100%;
+}
+
+.rating-review {
+  background-color: var(--light-grayish-magenta);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.rating-review p {
+  color: var(--very-dark-magenta);
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+/* Second section CSS */
+/* Testimonial CSS */
+
+.testimonial {
+  background-color: var(--very-dark-magenta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 30px 35px;
+  border-radius: 10px;
+}
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.reviewer-img {
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.profile-name {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: start;
+}
+.profile-verified {
+  color: var(--soft-pink);
+  text-align: start;
+  font-size: 15px;
+}
+.testimonial-text {
+  color: var(--light-grayish-magenta);
+  line-height: 1.5;
+  font-size: 15px;
+  text-align: start;
+}
+
+/* Desktop Version */
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: 0% 0%, 100% 200%;
+  }
+  .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    min-height: 100dvh;
-}
-
-.container{
-    width: 350px;
-}
-
-.title{
-    color: var(--very-dark-magenta);
-}
-.description{
-    color: var(--dark-grayish-magenta);
-}
-
-.stars-container{
+    width: 80%;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .intro-content {
+    width: 80%;
+  }
+  .content-title {
+    font-size: 45px;
+    padding: 0 55px 0 30px;
+    text-align: start;
+  }
+  .content-description {
+    padding: 20px 30px;
+    text-align: start;
+  }
+  .rating-review {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.stars-review{
-    
-}
-
-.review-container{
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+    width: 65%;
+  }
+  .rating-review:nth-child(2) {
+    left: 60px;
+  }
+  .rating-review:nth-child(3) {
+    left: 100px;
+  }
+  .rating-review p {
+    margin-right: 15px;
+  }
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonial {
+    margin: 30px;
+    position: relative;
+  }
+  .testimonial:nth-child(2) {
+    top: 20px;
+  }
+  .testimonial:nth-child(3) {
+    top: 40px;
+  }
 }
 
 .attribution {
+  margin-top: 40px;
   font-size: 11px;
   text-align: center;
 }
