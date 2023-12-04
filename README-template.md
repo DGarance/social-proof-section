@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/socialproofsection-htmlcss-flexbox-and-grid-LDfzjzsyMP)
+- Live Site URL: [Github Live](https://your-live-site-url.com)
 
 ## My process
 
